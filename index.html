@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hostel Recommendation System</title>
+  <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Hostel Recommendation System</h1>
+    <form id="hostelForm">
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender">
+        <option value="Boys">Boys</option>
+        <option value="Girls">Girls</option>
+        <option value="Unisex">Unisex</option>
+      </select>
+
+      <label for="location">Preferred Location:</label>
+      <input type="text" id="location" name="location" placeholder="Enter location" required>
+
+      <label for="facilities">Preferred Facilities:</label>
+      <input type="text" id="facilities" name="facilities" placeholder="e.g., Wi-Fi, AC" required>
+
+      <label for="rating">Minimum Rating:</label>
+      <input type="number" id="rating" name="rating" step="0.1" min="0" max="5" placeholder="e.g., 4.0" required>
+
+      <label for="price">Maximum Price:</label>
+      <input type="number" id="price" name="price" placeholder="e.g., 5500" required>
+
+      <button type="button" id="submitBtn">Get Recommendations</button>
+    </form>
+
+    <div id="recommendations">
+      <h2>Recommended Hostels:</h2>
+      <ul id="resultsList"></ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
